@@ -3,6 +3,7 @@ from datetime import datetime
 import pandas as pd
 import time
 from concurrent.futures import ThreadPoolExecutor
+import mplfinance as mpf
 
 client = finnhub.Client(api_key="d617g2pr01qjrruh84b0d617g2pr01qjrruh84bg")
 
@@ -57,3 +58,15 @@ while time.time() - start_time < t:
         executor.map(call, stocks)
 
     time.sleep(5)
+
+# ---- GRAFICAR LOS DATOS ----
+
+for symbol in stocks:
+    file = f"{symbol}.csv"
+    df = pd.read_csv(file)
+
+    df["Datetime"] = pd.to_datetime(df["Fecha"] + " " + df["Hora"])
+    df.set_index("Datetime",inplace=True)
+
+    ohlc=df["Precio"].resample("5min").ohlc()
+    mpf.plot(ohlc, type="candle", title=symbol, style="charles")
