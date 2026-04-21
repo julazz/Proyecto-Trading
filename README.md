@@ -41,11 +41,11 @@ Clasificación general del comportamiento:
 
 
 🧠 Roadmap (Machine Learning)
- -Modelos de predicción de precios
- -Series temporales (ARIMA, LSTM)
- -Clasificación de señales de trading
- -Backtesting de estrategias
- -Optimización de hiperparámetros
+ 🔲Modelos de predicción de precios 
+ 🔲Series temporales (ARIMA, LSTM)
+ 🔲Clasificación de señales de trading
+ 🔲Backtesting de estrategias
+ 🔲Optimización de hiperparámetros
 
 
 ⚙️ Instalación
