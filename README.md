@@ -99,7 +99,3 @@ El trading implica riesgo.
 - Integración con brokers
 
 
-
-
-o ayudarte a meterle ML real (por ejemplo un modelo que prediga el siguiente precio o señal)
-
